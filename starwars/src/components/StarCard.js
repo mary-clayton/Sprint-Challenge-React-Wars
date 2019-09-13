@@ -1,18 +1,25 @@
 import React from "react";
-import {Card, CardImg, CardText, CardBody, CardTitle} from 'reactstrap';
+import {Card, CardText, CardBody, CardTitle} from 'reactstrap';
+import "./StarWars.css"
+import styled from "styled-components"
+
+const Button = styled.button `
+color: #FFF;
+background: darkgrey;
+border-radius: 12px;
+`
+
 const StarCard = props => {
     return (
-        <div className="starCards" key={props.key}>
+        <div className="starCards">
         <Card className="cards">
-          <CardBody>
-            <CardTitle>{props.name}</CardTitle>
-            <CardText className="cardtext">{props.gender}
+          <CardBody className= "body">
+            <CardTitle>{props.person.name}</CardTitle>
+            <CardText className="cardtext">Gender:{props.person.gender}
             </CardText>
-            <CardText className="cardtext">{props.species}
+            <CardText className="cardtext">Birth Year:{props.person.birth_year}
             </CardText>
-            <CardText className="cardtext">{props.birthYear}
-            </CardText>
-            <CardImg bottom width="100%" src={props.homeworld} alt="Card image cap" />
+            <Button href={props.person.url} target="'_blank">Check out the API</Button>
           </CardBody>
         </Card>
       </div>)
