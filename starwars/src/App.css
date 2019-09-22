@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  padding: 3%;
+}
+.Header {
+  color: black;
+  text-shadow: 1px 1px 5px #fff;
+}
+/* write your parent styles in here for your App.js */
+.rows {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.row {
+  margin-right: 0% !important;
+  margin-left: 0% !important;
+}
+
+.starCards {
+  margin-right: 5%;
+}
+.loader {
+  color: black;
+  text-shadow: 1px 1px 5px #fff;
+  margin-top: 10%
+}
